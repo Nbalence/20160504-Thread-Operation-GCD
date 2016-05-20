@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bzB-0x-PqM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8N-19-Cg7">
+                                <rect key="frame" x="72" y="97" width="205" height="70"/>
+                                <animations/>
+                                <state key="normal" title="AFURLSessionManager"/>
+                                <connections>
+                                    <segue destination="KjM-US-2BT" kind="show" id="dX5-IX-Mh2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYB-nz-JPh">
+                                <rect key="frame" x="78" y="237" width="233" height="46"/>
+                                <animations/>
+                                <state key="normal" title="AFHttpSessionManager"/>
+                                <connections>
+                                    <segue destination="YJm-P0-LqS" kind="show" id="aHX-HJ-Ley"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8lq-B8-jDa"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="-1296"/>
+        </scene>
+        <!--Session ManagerVC-->
+        <scene sceneID="BBz-mP-3ew">
+            <objects>
+                <viewController id="YJm-P0-LqS" customClass="AFHTTPSessionManagerVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="38o-Gt-DNg"/>
+                        <viewControllerLayoutGuide type="bottom" id="tap-Oa-bzi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zRr-To-V5u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gW-MB-Tuw">
+                                <rect key="frame" x="91" y="273" width="195" height="30"/>
+                                <animations/>
+                                <state key="normal" title="POST"/>
+                                <connections>
+                                    <action selector="postRequest:" destination="YJm-P0-LqS" eventType="touchUpInside" id="hRB-sR-Wkh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mr-6Y-yeN">
+                                <rect key="frame" x="91" y="380" width="195" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Mult-Part-POST"/>
+                                <connections>
+                                    <action selector="multPartPostRequest:" destination="YJm-P0-LqS" eventType="touchUpInside" id="F3M-Ud-Ce3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLH-bv-qrM">
+                                <rect key="frame" x="91" y="186" width="195" height="30"/>
+                                <animations/>
+                                <state key="normal" title="GET"/>
+                                <connections>
+                                    <action selector="getRequest:" destination="YJm-P0-LqS" eventType="touchUpInside" id="Nz0-qb-fEs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfm-5J-fhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="-382"/>
+        </scene>
+        <!--URL Session ManagerVC-->
+        <scene sceneID="D8W-Yq-nhC">
+            <objects>
+                <viewController id="KjM-US-2BT" customClass="AFURLSessionManagerVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LtG-aY-wD5"/>
+                        <viewControllerLayoutGuide type="bottom" id="PPE-Va-TZ9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CFI-rw-9Kt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lv3-eW-OGX">
+                                <rect key="frame" x="104" y="168" width="183" height="30"/>
+                                <animations/>
+                                <state key="normal" title="下载图片"/>
+                                <connections>
+                                    <action selector="touchDownAction:" destination="KjM-US-2BT" eventType="touchUpInside" id="fGn-a2-DAX"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-XB-dCr">
+                                <rect key="frame" x="71" y="132" width="232" height="2"/>
+                                <animations/>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="x7r-SF-hSN">
+                                <rect key="frame" x="71" y="251" width="237" height="2"/>
+                                <animations/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUx-9S-zpQ">
+                                <rect key="frame" x="104" y="321" width="183" height="30"/>
+                                <animations/>
+                                <state key="normal" title="上传两张图片"/>
+                                <connections>
+                                    <action selector="UPloadImage:" destination="KjM-US-2BT" eventType="touchUpInside" id="heh-v5-dWk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="downProgressView" destination="hu1-XB-dCr" id="pNA-qu-z4a"/>
+                        <outlet property="upLoadPressView" destination="x7r-SF-hSN" id="H5V-TX-oxl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mn7-sk-RNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="-1296"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EhO-wg-elI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bzB-0x-PqM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b0k-fS-aZR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lgo-28-TPn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07P-eZ-mJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738" y="-1296"/>
+        </scene>
+    </scenes>
+</document>
